@@ -1,5 +1,5 @@
 {
-  "name": "frontend-app",
+  "name": "view-ui-project",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -45,13 +45,13 @@
     "rules": {
       "generator-star-spacing": "off",
       "no-tabs": "off",
-      "no-unused-vars": "off",
+      "no-unused-vars": "warn",
       "no-console": "off",
       "no-irregular-whitespace": "off",
       "no-debugger": "off",
       "no-undef": "off",
-      "vue/no-unused-vars": "off",
-      "vue/no-unused-components": "off",
+      "vue/no-unused-vars": "warn",
+      "vue/no-unused-components": "warn",
       "vue/no-parsing-error": "off"
     }
   },

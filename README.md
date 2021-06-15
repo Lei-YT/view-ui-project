@@ -1,4 +1,4 @@
-# frontend-app
+# view-ui-project
 
 ## Project setup
 ```
