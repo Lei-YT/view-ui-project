@@ -139,8 +139,9 @@ _axios.interceptors.response.use(
                     err.message = 'http版本不支持该请求'
                     break;
                 default:
-                    err.message = `连接错误${err.response.status}`
+                    err.message = `连接错误`
             }
+            err.message += ' (Status Code:' + err.response.status + ')'
 
         } else {
             err.message = "连接到服务器失败"
@@ -149,7 +150,7 @@ _axios.interceptors.response.use(
 
         Vue.prototype.$Notice.warning({
             title: '温馨提示',
-            desc: err.message + ' (Status Code:' + err.response.status + ')'
+            desc: err.message
         });
         // console.log(`%c ${err.message} Status code:${err.response.status} %c ${self.location.href}`, "background:red ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff;border:red 1px solid", "background:#fff ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff;border:red 1px solid")
         return Promise.reject(err.response)
